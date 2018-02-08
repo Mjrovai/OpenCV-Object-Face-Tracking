@@ -1,2 +1,2 @@
 # OpenCV-Object-Face-Tracking
-Tracking objects and Face with OpenCV and Python
+Face and Objects tracking with OpenCV and Python
