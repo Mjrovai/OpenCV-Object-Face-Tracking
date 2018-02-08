@@ -7,15 +7,19 @@ Adapted by Marcelo Rovai - MJRoBot.org @8Feb18
 
 import cv2
 import numpy as np
- 
-img = cv2.imread('yellow_object.JPG', 1) # The 1 means we want the image in BGR, and not in grayscale
+
+# Read the picure - The 1 means we want the image in BGR
+img = cv2.imread('yellow_object.JPG', 1) 
+
 # resize imag to 20% in each axis
 img = cv2.resize(img, (0,0), fx=0.2, fy=0.2)
 # convert BGR image to a HSV image
 hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV) 
 
-# NumPy to create arrays to hold lower and upper range (got from bgr_hsv_converter.py)
-lower_range = np.array([24, 100, 100], dtype=np.uint8) # The “dtype = np.uint8” simply means that it will have the data type an 8 bit integer
+# NumPy to create arrays to hold lower and upper range 
+# The “dtype = np.uint8” means that data type is an 8 bit integer
+
+lower_range = np.array([24, 100, 100], dtype=np.uint8) 
 upper_range = np.array([44, 255, 255], dtype=np.uint8)
 
 # create a mask for image
@@ -32,4 +36,3 @@ while(1):
     break
  
 cv2.destroyAllWindows()
-python
