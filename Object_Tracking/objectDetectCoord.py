@@ -12,7 +12,6 @@ Developed by Marcelo Rovai - MJRoBot.org @ 9Feb2018
 # import the necessary packages
 from __future__ import print_function
 from imutils.video import VideoStream
-import argparse
 import imutils
 import time
 import cv2
